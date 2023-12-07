@@ -1,3 +1,5 @@
+package com.neo.domain;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,8 +34,8 @@ public class GeekSubsequence {
     }
 
     public static void main(String[] args) {
-        String str1 = "ggf";
-        String str2 = "bgght";
+        String str1 = "gfg";
+        String str2 = "ggg";
 
 
         String better = betterString(str1, str2);

@@ -1,3 +1,5 @@
+package com.neo.domain;
+
 import java.util.Scanner;
 
 public class CommonClass {
