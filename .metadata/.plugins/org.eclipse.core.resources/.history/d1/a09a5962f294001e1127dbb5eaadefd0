@@ -1,0 +1,67 @@
+package com.app.neo;
+
+import java.util.Scanner;
+
+public class RomanStringClass {
+	
+	public static int getRomanValueString(String str) {
+		String updatedString = str.toUpperCase();
+		for(int i=0; i<=updatedString.length()-1;i++) {
+			if(updatedString.charAt(i) == 'I')
+				return 1;
+		    else if(updatedString.charAt(i) == 'V')
+				return 5;
+		    else if(updatedString.charAt(i) == 'X')
+		    	return 10;
+		    else if(updatedString.charAt(i) == 'L')
+		    	return 50;
+		    else if(updatedString.charAt(i) == 'C')
+		    	return 100;
+		    else if(updatedString.charAt(i) == 'D')
+		    	return 500;
+		    else if(updatedString.charAt(i) == 'M')
+		    	return 1000;
+		}
+		return 0;
+		
+	}
+	
+//	public static int getRomanValue(Character ch1) {
+//			//String ch = toUppe;
+//			if(ch.equals('I'))
+//				return 1;
+//		    else if(ch.equals('V'))
+//				return 5;
+//		    else if(ch.equals('X'))
+//		    	return 10;
+//		    else if(ch.equals('L'))
+//		    	return 50;
+//		    else if(ch.equals('C'))
+//		    	return 100;
+//		    else if(ch.equals('D'))
+//		    	return 500;
+//		    else if(ch.equals('M'))
+//		    	return 1000;
+//		return 0;
+//		
+//	}
+	
+//	public static int getRomanNumber(String str) {
+//		int result = 0;
+//	
+//		for(int i=0; i<str.length(); i++) {
+//			result = result+ getRomanValue(str.charAt(i));
+//		}
+//		return result;
+//	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter string ::");
+		String str = sc.nextLine();
+		int romanNumber = RomanStringClass.getRomanValueString(str);
+		System.out.println("Roman Number1 ::"+romanNumber);
+		//int romanNumber1 = RomanStringClass.getRomanNumber(str);
+		//System.out.println("Roman Number ::"+romanNumber1);
+		sc.close();
+	}
+}
