@@ -8,7 +8,7 @@ public class TripletArray {
                 listOfNumbers.add(n1);
             }
 
-            List<List<Integer>> finalOutput = new ArrayList<>();
+            List<List<Integer>> listOfTripletArrays = new ArrayList<>();
 
             for (int i = 0; i < listOfNumbers.size(); i++) {
                 for (int j = i + 1; j < listOfNumbers.size(); j++) {
@@ -20,14 +20,14 @@ public class TripletArray {
                         if (i1 + j1 + k1 == sum) {
                             List<Integer> tripletArray = Arrays.asList(i1, j1, k1);
                             tripletArray.sort(Integer::compareTo);
-                            if (!finalOutput.contains(tripletArray)) {
-                                finalOutput.add(tripletArray);
+                            if (!listOfTripletArrays.contains(tripletArray)) {
+                                listOfTripletArrays.add(tripletArray);
                             }
                         }
                     }
                 }
             }
-            return finalOutput;
+            return listOfTripletArrays;
         }
 
         public static void main(String[] args) {
